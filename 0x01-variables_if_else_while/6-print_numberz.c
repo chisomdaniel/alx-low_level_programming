@@ -11,14 +11,14 @@
 int main(void)
 {
 	int a = 48;
-	int line = 0;
+	/*int line = 0;*/
 
 	while (a <= 57)
 	{
 		putchar(a);
 		a++;
 	}
-	putchar(line);
+	putchar('\n');
 
 	return (0);
 }
