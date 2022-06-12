@@ -3,7 +3,7 @@
 /**
  * _islower - check for lower case characters
  *
- * c is an integer
+ * int c - is an integer
  *
  * Return: Always 0 (Success)
  */
