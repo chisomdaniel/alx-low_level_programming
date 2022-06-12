@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_sign - print the sign of a function
+ * _abs - print the absolute value of a number
  *
  * @n: is an integer
  *
