@@ -14,7 +14,7 @@ int _strlen(char *s)
 	int count = 0;
 
 	a = s;
-	for (i = 0; i < 200; i++)
+	for (i = 0; i < 1000; i++)
 	{
 		if (a[i] == 0)
 		{
