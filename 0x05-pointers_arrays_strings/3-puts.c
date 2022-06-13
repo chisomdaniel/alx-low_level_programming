@@ -5,7 +5,7 @@
  *
  * @str: pointer argument
  *
- * 
+ *
  */
 
 void _puts(char *str)
