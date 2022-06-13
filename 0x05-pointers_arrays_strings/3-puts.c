@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
+ * _puts - returns the length of a string
  *
- * @s: first variable
+ * @str: pointer argument
  *
- * Return: Always 0 (Success)
- *
+ * 
  */
 
 void _puts(char *str)
