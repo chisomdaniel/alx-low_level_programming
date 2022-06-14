@@ -14,6 +14,7 @@ void rev_string(char *s)
 	char b;
 	int count = 0;
 	int count2 = 0;
+	char string[100000];
 
 	a = s;
 	for (i = 0; i < 10000; i++)
@@ -31,10 +32,20 @@ void rev_string(char *s)
 	while (count > 0)
 	{
 		b = a[count - 1];
-		*(a + count2) = b;
+		string[count2] = b;
 		count--;
 		count2++;
 	}
 
-	_putchar('\n');
+	for (i = 0; i < 100000; i++)
+	{
+		if (string[i] == 0)
+		{
+			break;
+		}
+		else
+		{
+			a[i] = string[i];
+		}
+	}
 }
