@@ -27,7 +27,7 @@ void print_rev(char *s)
 		}
 	}
 
-	while (count >= 0)
+	while (count > 0)
 	{
 		b = a[count - 1];
 		_putchar(b);
