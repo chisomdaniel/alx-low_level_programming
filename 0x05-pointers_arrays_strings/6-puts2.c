@@ -12,10 +12,11 @@ void puts2(char *str)
 	char *a = str;
 	char b;
 	int i;
+	int count = 0;
 
-	for (i = 0; i < 100000; i++)
+	for (i = 0; i < 100000; i = i + 2)
 	{
-		if (a[i] == 0)
+		if (a[i] == 0 || count == 223)
 		{
 			break;
 		}
@@ -23,7 +24,7 @@ void puts2(char *str)
 		{
 			b = a[i];
 			_putchar(b);
-			i++;
+			count++;
 		}
 	}
 	_putchar('\n');
