@@ -33,7 +33,7 @@ int _strcmp(char *s1, char *s2)
 		else if (a == b)
 		{
 			value = b - a;
-			break;
+			continue;
 		}
 	}
 
