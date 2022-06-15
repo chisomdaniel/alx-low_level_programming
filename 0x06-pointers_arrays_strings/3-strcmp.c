@@ -4,7 +4,7 @@
  * @s1: first char
  * @s2: second char
  *
- * return: 0 (Success)
+ * Return: 0 (Success)
  *
  */
 
