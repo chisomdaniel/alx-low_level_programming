@@ -49,6 +49,5 @@ char *_strncat(char *dest, char *src, int n)
 			dest[i] = hold[i];
 		}
 	}
-
 	return (dest);
 }
