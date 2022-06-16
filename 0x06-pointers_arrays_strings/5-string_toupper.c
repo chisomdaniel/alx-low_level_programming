@@ -1,8 +1,6 @@
-#include <stdio.h>
-
 /**
  * string_toupper - function to change all lower case to uppercase
- * 
+ *
  * @n: string
  *
  * Return: return a pointer
@@ -14,7 +12,7 @@ char *string_toupper(char *n)
 	int a, b;
 	char hold[98];
 
-	for(i = 0;; i++)
+	for (i = 0;; i++)
 	{
 		b = (int)n[i];
 
