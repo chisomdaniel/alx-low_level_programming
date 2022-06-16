@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * reverse_array - function to revers an array of int
  *
@@ -16,14 +14,10 @@ void reverse_array(int *a, int n)
 	for (i = 1; i <= n; i++)
 	{
 		hold[i] = a[n - i];
-		printf("%d, ", hold[i]);
 	}
-	printf("\n");
 
 	for (j = 1; j <= n; j++)
 	{
 		a[j] = hold[j];
-		printf("%d, ", a[j]);
 	}
-	printf("\n");
 }
