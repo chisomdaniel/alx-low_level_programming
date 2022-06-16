@@ -11,14 +11,14 @@
 int _strcmp(char *s1, char *s2)
 {
 	int i;
-	int a;
-	int b;
+	unsigned char a;
+	unsigned char b;
 	int value;
 
 	for (i = 0; s1[i] != 0 || s2[i] != 0; i++)
 	{
-		a = (int)s1[i];
-		b = (int)s2[i];
+		a = s1[i];
+		b = s2[i];
 
 		if (a < b)
 		{
