@@ -1,12 +1,12 @@
 /**
  * _memset - main function
- * 
+ *
  * @s: main string
  * @b: a constant byte
  * @n: the first n characters
- * 
+ *
  * Return: return a pointer
- *  
+ *
  */
 
 char *_memset(char *s, char b, unsigned int n)
