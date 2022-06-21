@@ -1,11 +1,11 @@
 /**
  * _strstr - main function
- * 
+ *
  * @haystack: first argument
  * @needle: second argument
- * 
+ *
  * Return: return a pointer
- * 
+ *
  */
 
 
@@ -26,5 +26,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 		j++;
 	}
-	return(0);
+	return ('\0');
 }
