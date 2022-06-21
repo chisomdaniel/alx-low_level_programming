@@ -1,26 +1,30 @@
-include "main.h"
-
 /**
- * print_chessboard - main function
+ * _strstr - main function
  * 
- * @a: first argument
+ * @haystack: first argument
+ * @needle: second argument
+ * 
+ * Return: return a pointer
  * 
  */
 
-void print_chessboard(char (*a)[8])
+
+char *_strstr(char *haystack, char *needle)
 {
 	int i;
-	int j;
-	char hold;
+	int j = 0;
 
-	for (i = 0; i < 8; i++)
+	while (haystack[j] != 0)
 	{
-		for (j = 0; j < 8; j++)
+		for (i = 0; needle[i] == haystack[j] && needle[i] != 0; i++)
 		{
-			hold = a[i][j];
-			_putchar(hold);
+			if (needle[i + 1] == 0 && needle[i] == haystack[j])
+			{
+				return (haystack + (j - i));
+			}
+			j++;
 		}
-		putchar('\n');
+		j++;
 	}
+	return('NULL');
 }
-
