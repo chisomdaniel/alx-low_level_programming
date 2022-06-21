@@ -1,29 +1,26 @@
+include "main.h"
+
 /**
- * _strpbrk - main function
- *
- * @s: first argument
- * @accept: second argument
- *
- * Return: return a pointer
- *
+ * print_chessboard - main function
+ * 
+ * @a: first argument
+ * 
  */
 
-char *_strpbrk(char *s, char *accept)
+void print_chessboard(char (*a)[8])
 {
-	int i = 0;
+	int i;
 	int j;
+	char hold;
 
-	while (s[i] != 0)
+	for (i = 0; i < 8; i++)
 	{
-		for (j = 0; accept[j] != 0; j++)
+		for (j = 0; j < 8; j++)
 		{
-			if (accept[j] == s[i])
-			{
-				return (&s[i]);
-			}
+			hold = a[i][j];
+			_putchar(hold);
 		}
-		i++;
+		putchar('\n');
 	}
-
-	return (0);
 }
+
