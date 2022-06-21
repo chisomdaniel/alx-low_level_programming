@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * print_chessboard - main function
@@ -20,7 +20,7 @@ void print_chessboard(char (*a)[8])
 			hold = a[i][j];
 			_putchar(hold);
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
 

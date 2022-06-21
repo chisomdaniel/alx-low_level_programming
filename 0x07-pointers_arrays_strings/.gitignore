@@ -3,3 +3,4 @@ main.c
 1-memcpy
 2-strchr
 5-main.c
+_putchar.c
