@@ -2,9 +2,9 @@
 
 /**
  * print_chessboard - main function
- * 
+ *
  * @a: first argument
- * 
+ *
  */
 
 void print_chessboard(char (*a)[8])
