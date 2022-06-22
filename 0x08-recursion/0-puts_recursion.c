@@ -2,7 +2,7 @@
 
 /**
  * _puts_recursion - main function
- * 
+ *
  * @s: string argument
  */
 
