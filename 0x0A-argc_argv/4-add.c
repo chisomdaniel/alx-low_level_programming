@@ -22,10 +22,10 @@ int main(int argc, char **argv)
 
 	for (i = 1; i < argc; i++)
 	{
-		if (*argv[i] >= 48 && *argv[i] <= 57)
-		{
-			a = atoi(argv[i]);
+		a = atoi(argv[i]);
 
+		if ((*argv[i] >= 48 && *argv[i] <= 57) || a < 0)
+		{
 			if (a >= 0)
 			{
 				sum += a;
