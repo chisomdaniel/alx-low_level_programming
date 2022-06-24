@@ -26,12 +26,12 @@ int main(int argc, char **argv)
 	if (money <= 0)
 	{
 		printf("0");
-		return(0);
+		return (0);
 	}
 
 	for (i = 0; i <= 5; i++)
 	{
-		for(; money - cent[i] >= 0 && money > 0;)
+		for (; money - cent[i] >= 0 && money > 0;)
 		{
 			money -= cent[i];
 			count++;
