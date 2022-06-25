@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 	money = atoi(argv[1]);
 	if (money <= 0)
 	{
-		printf("0");
+		printf("0\n");
 		return (0);
 	}
 
@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 			count++;
 		}
 	}
-	printf("%i\n", count);
+	printf("%d\n", count);
 
 	return (0);
 }
