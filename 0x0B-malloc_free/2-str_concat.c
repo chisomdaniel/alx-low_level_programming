@@ -36,6 +36,7 @@ char *str_concat(char *s1, char *s2)
 	size = count1 + count2;
 	if (size == 0)
 	{
+		concat = "";
 		return (concat);
 	}
 
