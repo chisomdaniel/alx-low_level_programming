@@ -3,10 +3,10 @@
 
 /**
  * alloc_grid - a function to allocate grid storage
- * 
+ *
  * @width: grid width
  * @height: grid height
- * 
+ *
  * Return: a pointer to the allocated storage
  */
 
