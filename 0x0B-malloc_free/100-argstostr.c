@@ -15,9 +15,7 @@ char *argstostr(int ac, char **av)
 	int i, j, k = 0, count = 0;
 
 	if (ac == 0 || av == NULL)
-	{
 		return (NULL);
-	}
 
 	/* Allocate storage for string using malloc */
 	for (i = 0; i < ac; i++)
@@ -34,11 +32,9 @@ char *argstostr(int ac, char **av)
 		}
 	}
 
-	string = malloc(sizeof(*string) * count);
+	string = malloc(sizeof(*string) * count + 1);
 	if (string == NULL)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i < ac; i++)
 	{
@@ -54,7 +50,6 @@ char *argstostr(int ac, char **av)
 			k++;
 		}
 	}
-
 	return (string);
 }
 
