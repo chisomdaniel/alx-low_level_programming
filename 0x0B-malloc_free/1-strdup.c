@@ -34,7 +34,15 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	string = str;
+	for (i = 0;; i++)
+	{
+		if (i >= count)
+		{
+			string[i] = '\0';
+			break;
+		}
+		string[i] = str[i];
+	}
 
 	return (string);
 }
