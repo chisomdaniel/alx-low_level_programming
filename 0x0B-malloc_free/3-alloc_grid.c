@@ -30,7 +30,7 @@ int **alloc_grid(int width, int height)
 	for (i = 0; i < height; i++)
 	{
 		/* Alocate for the column, or pointer under the main one */
-		arr[i] = malloc(sizeof(arr) * width);
+		arr[i] = malloc(sizeof(arr) * width + 1);
 		if (arr[i] == NULL)
 		{
 			return (NULL);
