@@ -14,7 +14,7 @@ char **strtow(char *str)
 	char **string;
 	int i, j = 0, k = 0, hold, words = 0, letters = 0;
 
-	if (str == NULL || str == "")
+	if (str == NULL)
 	{
 		return (NULL);
 	}
