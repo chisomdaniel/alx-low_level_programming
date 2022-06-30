@@ -36,12 +36,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	size = count1 + count2;
-	if (size == 0)
+	/*if (size == 0)
 	{
 		concat = malloc(sizeof(*concat) * 1);
 		concat[0] = '\0';
 		return (concat);
-	}
+	}*/
 	concat = malloc(sizeof(*concat) * size + 1);
 	if (concat == NULL)
 	{
