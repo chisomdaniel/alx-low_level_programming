@@ -6,7 +6,7 @@
  *
  * @s: the operator
  *
- * Return: a pointer that correctly match the required 
+ * Return: a pointer that correctly match the required
  * function from the user input
  */
 

@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 	if (cal == 000)
 	{
 		printf("Error\n");
-		exit (100);
+		exit(100);
 	}
 
 	printf("%d\n", cal);
