@@ -37,7 +37,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("(nil)");
 				continue;
 			}
-			printf("%s", str, separator);
+			printf("%s", str);
 		}
 	}
 	printf("\n");

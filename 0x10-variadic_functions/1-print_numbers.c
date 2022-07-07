@@ -31,7 +31,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 		else
 		{
-			printf("%d", a, separator);
+			printf("%d", a);
 		}
 	}
 	printf("\n");
