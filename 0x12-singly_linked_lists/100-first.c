@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "lists.h"
 
 /**
  * before_main - a function to print texts beore the main function
@@ -6,7 +7,6 @@
  * Return: nothing
  */
 
-void before_main(void) __attribute__ ((constructor));
 
 void before_main(void)
 {
