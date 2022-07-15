@@ -13,7 +13,7 @@
 void free_list(list_t *head)
 {
 	list_t *hold = head;
-	
+
 	if (head == NULL)
 	{
 		return;
@@ -26,6 +26,4 @@ void free_list(list_t *head)
 		free(hold);
 		hold = head;
 	}
-
-	return;
 }
