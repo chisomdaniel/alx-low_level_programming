@@ -36,7 +36,7 @@ int create_file(const char *filename, char *text_context)
 	rt = write(pr, text_context, count);
 	if (rt <= -1)
 	{
-		close(pr)
+		close(pr);
 		return (-1);
 	}
 
