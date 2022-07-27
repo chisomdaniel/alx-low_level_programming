@@ -33,7 +33,7 @@ int copy(char *file_from, char *file_to)
 {
 	int pr1, pr2, rtrn1, rtrn2, close1, close2;
 	char buf[1025];
-	mode_t old_mask = umask(0);  /* Temporarily change the permission for the files */
+	mode_t old_mask = umask(0);
 
 	pr1 = open(file_from, O_RDONLY);
 	if (pr1 <= -1)
@@ -70,7 +70,6 @@ int copy(char *file_from, char *file_to)
 	close2 = close(pr2);
 	close_check(close2, pr2);
 	umask(old_mask);
-
 	return (1);
 }
 
