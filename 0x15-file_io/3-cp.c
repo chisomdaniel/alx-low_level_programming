@@ -33,7 +33,7 @@ int copy(char *file_from, char *file_to)
 {
 	int pr1, pr2, rtrn1, rtrn2, close1, close2;
 	char buf[1025];
-
+	mode_t old_mask = umask(0);  /* Temporarily change the permission for the files */
 
 	pr1 = open(file_from, O_RDONLY);
 	if (pr1 <= -1)
@@ -53,7 +53,7 @@ int copy(char *file_from, char *file_to)
 	close1 = close(pr1);
 	close_check(close1, pr1);
 
-	pr2 = open(file_to, O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	pr2 = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (pr2 <= -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
@@ -69,6 +69,7 @@ int copy(char *file_from, char *file_to)
 	}
 	close2 = close(pr2);
 	close_check(close2, pr2);
+	umask(old_mask);
 
 	return (1);
 }
