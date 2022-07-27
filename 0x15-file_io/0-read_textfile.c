@@ -44,7 +44,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	word[letter_num] = '\0';
 
-	written = write(1, word, letter_num);
+	written = write(STDOUT_FILENO, word, letter_num);
 	if (written <= -1 || written != letter_num)
 	{
 		close(pr);
