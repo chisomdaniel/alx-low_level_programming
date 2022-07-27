@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * close_check - check the close function for error
@@ -13,7 +14,7 @@ int close_check(int num, int fd)
 {
 	if (num <= -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	return (0);
@@ -21,6 +22,9 @@ int close_check(int num, int fd)
 
 /**
  * copy - a program that cpies the content of a file to another file
+ *
+ * @file_from: file to copy from
+ * @file_to: file to copy to
  *
  * Return: an int
  */
@@ -34,33 +38,33 @@ int copy(char *file_from, char *file_to)
 	pr1 = open(file_from, O_RDONLY);
 	if (pr1 <= -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-	rtrn1 = read(pr, buf, 1024);
+	rtrn1 = read(pr1, buf, 1024);
 	if (rtrn1 <= -1)
 	{
-		close1 = close(pr);
+		close1 = close(pr1);
 		close_check(close1, pr1);
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-	buf[rtn1] = '\0';
+	buf[rtrn1] = '\0';
 	close1 = close(pr1);
 	close_check(close1, pr1);
 
-	pr2 = open(file_to, O_WRONLY | O_TRUNC | O_CREAT, 0661);
+	pr2 = open(file_to, O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (pr2 <= -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	rtrn2 = write(pr2, buf, 1024);
+	rtrn2 = write(pr2, buf, rtrn1);
 	if (rtrn2 <= -1)
 	{
 		close2 = close(pr2);
 		close_check(close2, pr2);
-		dprintf(2, "Error: Can't write to %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
 	close2 = close(pr2);
@@ -69,10 +73,26 @@ int copy(char *file_from, char *file_to)
 	return (1);
 }
 
-
+/**
+ * main - the main function
+ *
+ * @argc: the number of input passed
+ * @argv: pointer to a string of input
+ *
+ * Return: 0 on success
+ */
 
 int main(int argc, char **argv)
 {
+
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+
+	copy(argv[1], argv[2]);
+
 	return (0);
 }
 
