@@ -3,7 +3,7 @@
 /**
  * insert_dnodeint_at_index - a function that inserts a new node at an index
  *
- * @head: pointer to the head of the list
+ * @h: pointer to the head of the list
  * @idx: the index where the new node should be added
  * @n: the new element
  *
@@ -30,7 +30,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			new->next = nextptr;
 			new->prev = nextptr->prev;
 			nextptr->prev->next = new;
-			return new;
+			return (new);
 		}
 		nextptr = nextptr->next;
 		index += 1;

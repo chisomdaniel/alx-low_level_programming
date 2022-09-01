@@ -23,7 +23,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	{
 		if (idx == index)
 		{
-			return ne;
+			return (ne);
 		}
 		ne = ne->next;
 		idx += 1;

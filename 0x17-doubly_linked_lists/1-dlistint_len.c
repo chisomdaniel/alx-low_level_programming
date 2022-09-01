@@ -15,7 +15,7 @@ size_t dlistint_len(const dlistint_t *h)
 	int element = 0;
 
 	if (head == NULL)
-		return element;
+		return (element);
 
 	element += 1;
 	ne = head->next;
@@ -24,5 +24,5 @@ size_t dlistint_len(const dlistint_t *h)
 		element += 1;
 		ne = ne->next;
 	}
-	return element;
+	return (element);
 }

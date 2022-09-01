@@ -15,7 +15,7 @@ size_t print_dlistint(const dlistint_t *h)
 	int element = 0;
 
 	if (head == NULL)
-		return element;
+		return (element);
 
 	printf("%d\n", head->n);
 	element += 1;
@@ -27,5 +27,5 @@ size_t print_dlistint(const dlistint_t *h)
 		ne = ne->next;
 	}
 
-	return element;
+	return (element);
 }
